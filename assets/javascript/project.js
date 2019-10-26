@@ -10,7 +10,6 @@ $("#Button").click(function () {
         method: "GET"
     }).then(function (response) {
         console.log(response);
-        console.log(response.image_url);
     })
 
 
@@ -27,6 +26,12 @@ $("#search").click(function () {
         method: "GET"
     }).then(function (response) {
         console.log(response);
+        console.log(response.image_url);
+        var image = $("<img>");
+        image.attr("src",response.image_url);
+        image.addClass("bandPics");
+        $("#tourDates-div").append(image);
+
     })
 })
 })
