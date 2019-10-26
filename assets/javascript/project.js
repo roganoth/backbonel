@@ -1,13 +1,14 @@
+$(document).ready(function(){
 
-$("#Button").click(function(){
-
+$("#Button").click(function () {
+    
+    var artist = $("#userInput").val().trim();
     var ytQueryURL = "https://www.googleapis.com/youtube/v3/playlists" + artist + "api=AIzaSyBcKMzNwbAtyNu07WyX9lJSU1VMgIueq0M"
-    var artist;
 
     $.ajax({
         url: ytQueryURL,
         method: "GET"
-    }).then(function(response){
+    }).then(function (response) {
         console.log(response);
     })
 
@@ -15,15 +16,22 @@ $("#Button").click(function(){
 
 
 });
-$("#search").click(function(){
+$("#search").click(function () {
 
-var bitQueryURL = "https://rest.bandsintown.com/artists/" + artist + "?app_id=test";
-var artist;
+    var artist = $("#userInput").val().trim();
+    var bitQueryURL = "https://rest.bandsintown.com/artists/" + artist + "?app_id=test";
 
-$.ajax({
-    url: bitQueryURL,
-    method: "GET"
-}).then(function(response){
-    console.log(response);
+    $.ajax({
+        url: bitQueryURL,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response);
+        console.log(response.image_url);
+        var image = $("<img>");
+        image.attr("src",response.image_url);
+        image.addClass("bandPics");
+        $("#tourDates-div").append(image);
+
+    })
 })
 })
