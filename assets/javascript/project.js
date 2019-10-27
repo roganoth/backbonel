@@ -1,37 +1,45 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
-$("#Button").click(function () {
-    
-    var artist = $("#userInput").val().trim();
-    var ytQueryURL = "https://www.googleapis.com/youtube/v3/playlists" + artist + "api=AIzaSyBcKMzNwbAtyNu07WyX9lJSU1VMgIueq0M"
+    $("#Button").click(function () {
 
-    $.ajax({
-        url: ytQueryURL,
-        method: "GET"
-    }).then(function (response) {
-        console.log(response);
+        var artist = $("#userInput").val().trim();
+        var ytQueryURL = "https://www.googleapis.com/youtube/v3/playlists" + artist + "api=AIzaSyBcKMzNwbAtyNu07WyX9lJSU1VMgIueq0M"
+
+        $.ajax({
+            url: ytQueryURL,
+            method: "GET"
+        }).then(function (response) {
+            console.log(response);
+        })
+
+
+
+
+    });
+    $("#search").click(function (event) {
+        event.preventDefault();
+        var artist = $("#userInput").val().trim();
+        var bitQueryURL = "https://rest.bandsintown.com/artists/" + artist + "?app_id=test";
+        var bitQueryURL2 = "https://rest.bandsintown.com/artists/" + artist + "/events/?app_id=test";
+        $("#tourDates-div").empty();
+
+        $.ajax({
+            url: bitQueryURL,
+            method: "GET"
+        }).then(function (response) {
+            console.log(response);
+            console.log(response.image_url);
+            var image = $("<img>");
+            image.attr("src", response.image_url);
+            image.addClass("bandPics");
+            $("#tourDates-div").append(image);
+
+        })
+        $.ajax({
+            url: bitQueryURL2,
+            method: "GET",
+        }).then(function (response2) {
+            console.log(response2);
+        })
     })
-
-
-
-
-});
-$("#search").click(function () {
-
-    var artist = $("#userInput").val().trim();
-    var bitQueryURL = "https://rest.bandsintown.com/artists/" + artist + "?app_id=test";
-
-    $.ajax({
-        url: bitQueryURL,
-        method: "GET"
-    }).then(function (response) {
-        console.log(response);
-        console.log(response.image_url);
-        var image = $("<img>");
-        image.attr("src",response.image_url);
-        image.addClass("bandPics");
-        $("#tourDates-div").append(image);
-
-    })
-})
 })
