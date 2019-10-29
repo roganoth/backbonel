@@ -41,10 +41,16 @@ $(document).ready(function () {
         }).then(function (response2) {
             console.log(response2);
             for (i = 0; i < response2.length; i++) {
-                var a = $("<div>");
-                a.addClass("tourInfo");
-                // a.html(response2[i].datetime + " " + response2[i].venue.city + ", " + response2[i].venue.country + "<br>" + response2[i].venue.name);
-                $("#tourDates-div").append(a);
+                if (i < 5){
+
+                    var a = $("<div>");
+                    a.addClass("tourInfo");
+                    a.html(response2[i].datetime + " " + response2[i].venue.city + ", " + response2[i].venue.country + "<br>" + response2[i].venue.name);
+                    $("#tourDates-div").append(a);
+                }
+                else {
+                    console.log("done")
+                }
             }
             // for (i = 0; i < 5; i++) {
             //     a.html(response2[i].datetime + " " + response2[i].venue.city + ", " + response2[i].venue.country + "<br>" + response2[i].venue.name);
