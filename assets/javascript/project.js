@@ -54,7 +54,8 @@ $(document).ready(function () {
         var artist = $("#userInput").val().trim();
         var bitQueryURL = "https://rest.bandsintown.com/artists/" + artist + "?app_id=test";
         var bitQueryURL2 = "https://rest.bandsintown.com/artists/" + artist + "/events/?app_id=test";
-        $("#tourDates-div").empty();
+        $("#bandPic").empty();
+        $("#upcomingEvents").empty();
 
         $.ajax({
             url: bitQueryURL,
@@ -65,7 +66,7 @@ $(document).ready(function () {
             var image = $("<img>");
             image.attr("src", response.image_url);
             image.addClass("bandPics");
-            $("#tourDates-div").append(image);
+            $("#bandPic").append(image);
 
         })
         $.ajax({
@@ -79,16 +80,12 @@ $(document).ready(function () {
                     var a = $("<div>");
                     a.addClass("tourInfo");
                     a.html(response2[i].datetime + " " + response2[i].venue.city + ", " + response2[i].venue.country + "<br>" + response2[i].venue.name);
-                    $("#tourDates-div").append(a);
+                    $("#upcomingEvents").append(a);
                 }
                 else {
                     console.log("done")
                 }
             }
-            // for (i = 0; i < 5; i++) {
-            //     a.html(response2[i].datetime + " " + response2[i].venue.city + ", " + response2[i].venue.country + "<br>" + response2[i].venue.name);
-            //     $("#tourDates-div").append(a);
-            // }
         })
     })
 })
