@@ -24,6 +24,7 @@ $(document).ready(function () {
         var bitQueryURL2 = "https://rest.bandsintown.com/artists/" + artist + "/events/?app_id=test";
         $("#bandPic").empty();
         $("#upcomingEvents").empty();
+        $("#artistFB").empty();
 
         $.ajax({
             url: bitQueryURL,

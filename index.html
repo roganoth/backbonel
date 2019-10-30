@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bands project</title>
-    <link rel="reset" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
-<body>
-    <div id="wrapper">
-            <h1 id="title">Bands</h1>
-            <input id="userInput"><button id="search">Search</button>
-            <div id="container">
-                    <div id= "tourDates-div">Tour Dates:</div>  
-                    <div id="bandPic"></div>
-                    <div id="artistFB"></div>
-                    <div id="upcomingEvents"></div>
-            </div>
-            <div id="container">
-                    <div id= "bandsInfo">Bands Info:</div>
-                    <div id="similarArtist">Similar Artist:</div>
-            </div>
-           
 
-    </div>
-    
-    
-    
-        <script
-        src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        crossorigin="anonymous"></script>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Bands project</title>
+        <link rel="reset" href="assets/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+        <div id="wrapper">
+                <h1 id="title">Bands</h1>
+                <form>
+                        <input id="userInput">
+                        <input id="search" type="submit" value="Search">
+                </form>
+                <div id="container">
+                        <div id="tourDates-div">Tour Dates:</div>
+                        <div id="bandPic"></div>
+                        <div id="artistFB"></div>
+                        <div id="upcomingEvents"></div>
+                </div>
+                <div id="container">
+                        <div id="bandsInfo">Bands Info:</div>
+                        <div id="similarArtist">Similar Artist:</div>
+                </div>
+
+
+        </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
         <script src="assets/javascript/project.js"></script>
 </body>
+
 </html>
