@@ -56,7 +56,7 @@ $(document).ready(function () {
                     a.attr("href",response2[i].url);
                     a.attr("target","blank");
                     a.addClass("tourInfo");
-                    a.html(response2[i].datetime + " " + response2[i].venue.city + ", " + response2[i].venue.country + "<br>" + response2[i].venue.name);
+                    a.html(response2[i].datetime + " " + response2[i].venue.city + ", " + response2[i].venue.country + "<br>" + response2[i].venue.name + "<br>");
                     $("#upcomingEvents").append(a);
                 }
                 else {
