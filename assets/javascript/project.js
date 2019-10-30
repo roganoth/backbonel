@@ -40,7 +40,7 @@ $(document).ready(function () {
             artistLink.attr("href", response.facebook_page_url);
             artistLink.attr("target","blank");
             artistLink.text(response.name);
-            $("#bandPic").append(artistLink);
+            $("#artistFB").append(artistLink);
 
         })
         $.ajax({
@@ -51,7 +51,9 @@ $(document).ready(function () {
             for (i = 0; i < response2.length; i++) {
                 if (i < 5){
 
-                    var a = $("<div>");
+                    var a = $("<a>");
+                    a.attr("href",response2[i].url);
+                    a.attr("target","blank");
                     a.addClass("tourInfo");
                     a.html(response2[i].datetime + " " + response2[i].venue.city + ", " + response2[i].venue.country + "<br>" + response2[i].venue.name);
                     $("#upcomingEvents").append(a);
