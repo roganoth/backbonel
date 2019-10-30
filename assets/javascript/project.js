@@ -67,6 +67,12 @@ $(document).ready(function () {
             image.attr("src", response.image_url);
             image.addClass("bandPics");
             $("#bandPic").append(image);
+            var artistLink = $("<a>");
+            artistLink.addClass("artistFB");
+            artistLink.attr("href", response.facebook_page_url);
+            artistLink.attr("target","blank");
+            artistLink.text(response.name);
+            $("#bandPic").append(artistLink);
 
         })
         $.ajax({
