@@ -63,6 +63,7 @@ $(document).ready(function () {
                     console.log("done")
                 }
             }
+            $("#userInput").text(" ");
         })
     })
 })
