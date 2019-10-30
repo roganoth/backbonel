@@ -28,15 +28,4 @@ $("#search").click(function () {
 
 });
 
-//$("#search").click(function(){
 
-//var bitQueryURL = "https://rest.bandsintown.com/artists/" + artist + "?app_id=test";
-//var artist = $("#userInput").val().trim();
-
-//$.ajax({
-//    url: bitQueryURL,
- //   method: "GET"
-//}).then(function(response){
-  //  console.log(response);
-//})
-//})
