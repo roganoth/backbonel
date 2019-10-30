@@ -74,7 +74,7 @@ $("#search").click(function () {
     }).then(function (response) {
         console.log(response);
 
-        $("#tourDates-div").empty();
+        $("#similarArtist").empty();
 
 
         for (i = 0; i < response.similarartists.artist.length; i++) {
@@ -83,7 +83,8 @@ $("#search").click(function () {
            var b = $("<a>")
            b.html(response.similarartists.artist[i].name + "<br>");
            b.attr("href", response.similarartists.artist[i].url);
-          $("#tourDates-div").append(b);
+           b.attr("target", "blank");
+          $("#similarArtist").append(b);
             }
        }
 
