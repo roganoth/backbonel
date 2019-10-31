@@ -1,22 +1,6 @@
 
 $(document).ready(function () {
 
-    $("#Button").click(function () {
-
-        var artist = $("#userInput").val().trim();
-        var ytQueryURL = "https://www.googleapis.com/youtube/v3/playlists" + artist + "api=AIzaSyBcKMzNwbAtyNu07WyX9lJSU1VMgIueq0M"
-
-        $.ajax({
-            url: ytQueryURL,
-            method: "GET"
-        }).then(function (response) {
-            console.log(response);
-        })
-
-
-
-
-    });
     $("#search").click(function (event) {
         event.preventDefault();
         var artist = $("#userInput").val().trim();
@@ -76,6 +60,7 @@ $("#search").click(function () {
 
         $("#similarArtist").empty();
 
+      
 
         for (i = 0; i < response.similarartists.artist.length; i++) {
             if (i < 5)  {
@@ -91,6 +76,7 @@ $("#search").click(function () {
 
     })
 
+  
 
 });
 
