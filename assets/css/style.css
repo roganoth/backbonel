@@ -1,22 +1,41 @@
 html,
 body {
-  height: 100%;
+    background-image: url("../images/160912-levisau-3085-jpg.jpg");
+    background-repeat: repeat
 }
-h1{
+#title{
     font-family: 'Courier New', Courier, monospace;
-    font-size: 100px;
+    font-size: 50px;
     margin-bottom: 50px;
-    color: aqua;    
+    color:purple;    
 
 }
 #tourDates{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
-    color: blueviolet;
+    color: aqua;
 
 }
 
-#bandsInfo{
-font-family: Arial, Helvetica, sans-serif;
 
+
+
+img{
+  height: 400px;
+  width: 400px;
+
+}
+
+#bandsInfo-Area{
+  margin-left: 10px;
+  width: 210px;
+  height: 100px;
+  font-family: 'Courier New', Courier, monospace
+
+}
+#tourDatesInfo-Area{
+  margin-left: 900px;
+  margin-bottom: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  
 }
