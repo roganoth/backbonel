@@ -49,6 +49,9 @@ $(document).ready(function () {
             method: "GET",
         }).then(function (response2) {
             console.log(response2);
+            if (response2.length === 0) {
+                $("#upcomingEvents").append("<p>Not currently touring.</p>")
+            }
             for (i = 0; i < response2.length; i++) {
                 if (i < 5) {
 
@@ -106,7 +109,7 @@ $("#search").click(function () {
     }).then(function (response2) {
         console.log(response2);
 
-    
+
         var c = $("<a>");
         c.html("<br>" + "Listen Here!");
         c.attr("href", response2.artist.url);
