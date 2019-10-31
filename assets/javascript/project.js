@@ -39,7 +39,7 @@ $(document).ready(function () {
             var artistLink = $("<a>");
             artistLink.addClass("artistFB");
             artistLink.attr("href", response.facebook_page_url);
-            artistLink.attr("target","blank");
+            artistLink.attr("target", "blank");
             artistLink.text(response.name);
             $("#artistFB").append(artistLink);
 
@@ -50,11 +50,11 @@ $(document).ready(function () {
         }).then(function (response2) {
             console.log(response2);
             for (i = 0; i < response2.length; i++) {
-                if (i < 5){
+                if (i < 5) {
 
                     var a = $("<a>");
-                    a.attr("href",response2[i].url);
-                    a.attr("target","blank");
+                    a.attr("href", response2[i].url);
+                    a.attr("target", "blank");
                     a.addClass("tourInfo");
                     a.html(response2[i].datetime + " " + response2[i].venue.city + ", " + response2[i].venue.country + "<br>" + response2[i].venue.name + "<br>");
                     $("#upcomingEvents").append(a);
@@ -85,18 +85,37 @@ $("#search").click(function () {
 
 
         for (i = 0; i < response.similarartists.artist.length; i++) {
-            if (i < 5)  {
-            
-           var b = $("<a>")
-           b.html(response.similarartists.artist[i].name + "<br>");
-           b.attr("href", response.similarartists.artist[i].url);
-           b.attr("target", "blank");
-          $("#similarArtist").append(b);
+            if (i < 5) {
+
+                var b = $("<a>")
+                b.html(response.similarartists.artist[i].name + "<br>");
+                b.attr("href", response.similarartists.artist[i].url);
+                b.attr("target", "blank");
+                $("#similarArtist").append(b);
             }
-       }
+        }
 
 
     })
+
+    $.ajax({
+        url: "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + artist + "&api_key=7f191238f1b38fc7abb83fcb39e8b91c&format=json",
+        method: "GET",
+
+
+    }).then(function (response2) {
+        console.log(response2);
+
+    
+        var c = $("<button>")
+        c.html("<br>" + "Listen Here!");
+        c.attr("href", response2.artist.url);
+        c.attr("target", "blank");
+        $("#artistFB").append(c);
+    });
+
+
+
 
 
 });
