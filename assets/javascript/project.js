@@ -114,8 +114,6 @@ $("#search").click(function () {
         $("#artistFB").append(c);
     });
 
-
-
 });
 
 
