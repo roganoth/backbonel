@@ -107,14 +107,12 @@ $("#search").click(function () {
         console.log(response2);
 
     
-        var c = $("<button>")
+        var c = $("<a>");
         c.html("<br>" + "Listen Here!");
         c.attr("href", response2.artist.url);
         c.attr("target", "blank");
         $("#artistFB").append(c);
     });
-
-
 
 
 
