@@ -49,6 +49,9 @@ $(document).ready(function () {
             method: "GET",
         }).then(function (response2) {
             console.log(response2);
+            if (response2.upcoming_event_count < 1){
+                $("#upcomingEvents").append("<p>Not currently touring.</p>")
+            }
             for (i = 0; i < response2.length; i++) {
                 if (i < 5) {
 
