@@ -40,7 +40,7 @@ $(document).ready(function () {
             artistLink.addClass("artistFB");
             artistLink.attr("href", response.facebook_page_url);
             artistLink.attr("target", "blank");
-            artistLink.text(response.name);
+            artistLink.text("Follow Here");
             $("#artistFB").append(artistLink);
 
         })
