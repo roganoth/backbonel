@@ -57,9 +57,16 @@ img{
 
 }
 #tourDatesInfo-Area{
+
   background-color: rgba(221, 157, 229, 0.719);
   position: relative;
   margin-left: 350px;
+
+  background-color: white;
+  position: relative;
+  top: -110px;
+  margin-left: 450px;
+
   margin-bottom: 30px;
   margin-top: -452px;
   font-family: 'Courier New', Courier, monospace;
@@ -67,6 +74,7 @@ img{
 }
 
 #similarArtist {
+
   background-color: rgba(221, 157, 229, 0.719);
   width:  174px;
   font-family: 'Roboto Slab', serif;
@@ -75,4 +83,12 @@ img{
   left: 147px;
   font-size: 12px;;
   color: white;
+
+  background-color: white;
+  float: right;
+  widows: 30%;
+  position: relative;
+  top: -300px;
+  left: -200px;
+
 }
