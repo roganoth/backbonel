@@ -59,7 +59,7 @@ $(document).ready(function () {
                     a.attr("href", response2[i].url);
                     a.attr("target", "blank");
                     a.addClass("tourInfo");
-                    a.html(response2[i].datetime + " " + response2[i].venue.city + ", " + response2[i].venue.country + "<br>" + response2[i].venue.name + "<br>");
+                    a.html(response2[i].datetime + "<br>" + response2[i].venue.city + ", " + response2[i].venue.country + "<br>" + response2[i].venue.name + "<br>" + " " + "<br>");
                     $("#upcomingEvents").append(a);
                 }
                 else {
@@ -85,7 +85,7 @@ $("#search").click(function () {
         console.log(response);
 
         $("#similarArtist").empty();
-        $("#similarArtist").text("Similar Artist");
+       // $("#similarArtist").text("Similar Artist");
 
 
         for (i = 0; i < response.similarartists.artist.length; i++) {
@@ -112,7 +112,7 @@ $("#search").click(function () {
 
 
         var c = $("<a>");
-        c.html("<br>" + "Listen Here!");
+        c.html("<br>" + "Listen Here!" + "<br>");
         c.attr("href", response2.artist.url);
         c.attr("target", "blank");
         $("#artistFB").append(c);
