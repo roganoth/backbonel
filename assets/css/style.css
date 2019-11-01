@@ -3,19 +3,37 @@ body {
     background-image: url("../images/160912-levisau-3085-jpg.jpg");
     background-repeat: repeat
 }
+
+#userInput {
+  width: 500px;
+  height: 20px;
+
+
+}
 #title{
     font-family: 'Courier New', Courier, monospace;
     font-size: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     color:purple;    
+    background-color: rgba(221, 157, 229, 0.719);
 
 }
 #tourDates{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 30px;
     color: aqua;
+    background-color: rgba(221, 157, 229, 0.719);
 
 }
+
+.tourInfo{
+  font-family: 'Roboto Slab', serif;
+  font-size: 10px;
+  color: aqua;
+  background-color: rgba(221, 157, 229, 0.719);
+
+}
+
 
 
 
@@ -27,14 +45,16 @@ img{
 }
 
 #bandsInfo-Area{
-  margin-left: 10px;
+  margin-top: -400px;
+  margin-left: 430px;
   width: 210px;
   height: 100px;
-  font-family: 'Courier New', Courier, monospace
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgba(221, 157, 229, 0.719);
 
 }
 #tourDatesInfo-Area{
-  background-color: white;
+  background-color: rgba(221, 157, 229, 0.719);
   position: relative;
   top: -110px;
   margin-left: 450px;
@@ -44,7 +64,7 @@ img{
 }
 
 #similarArtist {
-  background-color: white;
+  background-color: rgba(221, 157, 229, 0.719);
   float: right;
   widows: 30%;
   position: relative;
