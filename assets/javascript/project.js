@@ -85,6 +85,7 @@ $("#search").click(function () {
         console.log(response);
 
         $("#similarArtist").empty();
+        $("#similarArtist").text("Similar Artist");
 
 
         for (i = 0; i < response.similarartists.artist.length; i++) {
