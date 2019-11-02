@@ -70,7 +70,7 @@ $("#search").click(function () {
     var artist = $("#userInput").val().trim();
 
     $.ajax({
-        url: "http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=" + artist + "&api_key=7f191238f1b38fc7abb83fcb39e8b91c&format=json",
+        url: "https://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=" + artist + "&api_key=7f191238f1b38fc7abb83fcb39e8b91c&format=json",
         method: "GET",
 
     }).then(function (response) {
