@@ -1,2 +1,1 @@
-# backbonel
-project 1
+This project was desinged to allow users to follow their favorite musical artists. The user is able to search for the artist and primarily using the BandsInTown API their next five upcomming concerts (including date and location) would be returned. They are also be able to follow them on the social media that the artist has. And as a bonus, the concert listings would link the user to be able to purchase tickets (indirectly through bands in town).
